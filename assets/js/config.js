@@ -10,8 +10,8 @@
 // JS global variables
 window.config = {
   colors: {
-    primary: '#7367f0',
-    secondary: '#a8aaae',
+    primary: '#2d2a70',
+    secondary: '#ee6b24',
     success: '#28c76f',
     info: '#00cfe8',
     warning: '#ff9f43',
@@ -24,7 +24,7 @@ window.config = {
     bodyColor: '#6f6b7d',
     headingColor: '#5d596c',
     textMuted: '#a5a3ae',
-    borderColor: '#dbdade'
+    borderColor: '#dbdade',
   },
   colors_label: {
     primary: '#7367f029',
@@ -33,7 +33,7 @@ window.config = {
     info: '#00cfe829',
     warning: '#ff9f4329',
     danger: '#ea545529',
-    dark: '#4b4b4b29'
+    dark: '#4b4b4b29',
   },
   colors_dark: {
     cardColor: '#2f3349',
@@ -41,9 +41,9 @@ window.config = {
     bodyColor: '#b6bee3',
     headingColor: '#cfd3ec',
     textMuted: '#7983bb',
-    borderColor: '#434968'
+    borderColor: '#434968',
   },
-  enableMenuLocalStorage: true // Enable menu state with local storage support
+  enableMenuLocalStorage: true, // Enable menu state with local storage support
 };
 
 window.assetsPath = document.documentElement.getAttribute('data-assets-path');
@@ -91,8 +91,10 @@ if (typeof TemplateCustomizer !== 'undefined') {
   window.templateCustomizer = new TemplateCustomizer({
     cssPath: assetsPath + 'vendor/css' + (rtlSupport ? '/rtl' : '') + '/',
     themesPath: assetsPath + 'vendor/css' + (rtlSupport ? '/rtl' : '') + '/',
-    displayCustomizer: true,
-    lang: localStorage.getItem('templateCustomizer-' + templateName + '--Lang') || 'en', // Set default language here
+    displayCustomizer: false,
+    lang:
+      localStorage.getItem('templateCustomizer-' + templateName + '--Lang') ||
+      'en', // Set default language here
     // defaultTheme: 2,
     // defaultStyle: 'system',
     // defaultTextDir: 'rtl',
@@ -102,6 +104,14 @@ if (typeof TemplateCustomizer !== 'undefined') {
     // defaultNavbarType: 'sticky',
     // defaultFooterFixed: false,
     // defaultShowDropdownOnHover: false,
-    controls: ['rtl', 'style', 'headerType', 'contentLayout', 'layoutCollapsed', 'layoutNavbarOptions', 'themes']
+    controls: [
+      'rtl',
+      'style',
+      'headerType',
+      'contentLayout',
+      'layoutCollapsed',
+      'layoutNavbarOptions',
+      'themes',
+    ],
   });
 }

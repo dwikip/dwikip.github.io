@@ -22,18 +22,20 @@
 
   // swiper loop and autoplay
   // --------------------------------------------------------------------
-  const swiperWithPagination = document.querySelector('#swiper-with-pagination-cards');
+  const swiperWithPagination = document.querySelector(
+    '#swiper-with-pagination-cards',
+  );
   if (swiperWithPagination) {
     new Swiper(swiperWithPagination, {
       loop: true,
       autoplay: {
         delay: 2500,
-        disableOnInteraction: false
+        disableOnInteraction: false,
       },
       pagination: {
         clickable: true,
-        el: '.swiper-pagination'
-      }
+        el: '.swiper-pagination',
+      },
     });
   }
 
@@ -46,18 +48,18 @@
         type: 'area',
         parentHeightOffset: 0,
         toolbar: {
-          show: false
+          show: false,
         },
         sparkline: {
-          enabled: true
-        }
+          enabled: true,
+        },
       },
       markers: {
         colors: 'transparent',
-        strokeColors: 'transparent'
+        strokeColors: 'transparent',
       },
       grid: {
-        show: false
+        show: false,
       },
       colors: [config.colors.success],
       fill: {
@@ -66,62 +68,67 @@
           shade: shadeColor,
           shadeIntensity: 0.8,
           opacityFrom: 0.6,
-          opacityTo: 0.1
-        }
+          opacityTo: 0.1,
+        },
       },
       dataLabels: {
-        enabled: false
+        enabled: false,
       },
       stroke: {
         width: 2,
-        curve: 'smooth'
+        curve: 'smooth',
       },
       series: [
         {
-          data: [300, 350, 330, 380, 340, 400, 380]
-        }
+          data: [300, 350, 330, 380, 340, 400, 380],
+        },
       ],
       xaxis: {
         show: true,
         lines: {
-          show: false
+          show: false,
         },
         labels: {
-          show: false
+          show: false,
         },
         stroke: {
-          width: 0
+          width: 0,
         },
         axisBorder: {
-          show: false
-        }
+          show: false,
+        },
       },
       yaxis: {
         stroke: {
-          width: 0
+          width: 0,
         },
-        show: false
+        show: false,
       },
       tooltip: {
-        enabled: false
-      }
+        enabled: false,
+      },
     };
   if (typeof revenueGeneratedEl !== undefined && revenueGeneratedEl !== null) {
-    const revenueGenerated = new ApexCharts(revenueGeneratedEl, revenueGeneratedConfig);
+    const revenueGenerated = new ApexCharts(
+      revenueGeneratedEl,
+      revenueGeneratedConfig,
+    );
     revenueGenerated.render();
   }
 
   // Earning Reports Bar Chart
   // --------------------------------------------------------------------
-  const weeklyEarningReportsEl = document.querySelector('#weeklyEarningReports'),
+  const weeklyEarningReportsEl = document.querySelector(
+      '#weeklyEarningReports',
+    ),
     weeklyEarningReportsConfig = {
       chart: {
         height: 202,
         parentHeightOffset: 0,
         type: 'bar',
         toolbar: {
-          show: false
-        }
+          show: false,
+        },
       },
       plotOptions: {
         bar: {
@@ -130,8 +137,8 @@
           startingShape: 'rounded',
           endingShape: 'rounded',
           borderRadius: 4,
-          distributed: true
-        }
+          distributed: true,
+        },
       },
       grid: {
         show: false,
@@ -139,8 +146,8 @@
           top: -30,
           bottom: 0,
           left: -10,
-          right: -10
-        }
+          right: -10,
+        },
       },
       colors: [
         config.colors_label.primary,
@@ -149,56 +156,62 @@
         config.colors_label.primary,
         config.colors.primary,
         config.colors_label.primary,
-        config.colors_label.primary
+        config.colors_label.primary,
       ],
       dataLabels: {
-        enabled: false
+        enabled: false,
       },
       series: [
         {
-          data: [40, 65, 50, 45, 90, 55, 70]
-        }
+          data: [40, 65, 50, 45, 90, 55, 70],
+        },
       ],
       legend: {
-        show: false
+        show: false,
       },
       xaxis: {
         categories: ['Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su'],
         axisBorder: {
-          show: false
+          show: false,
         },
         axisTicks: {
-          show: false
+          show: false,
         },
         labels: {
           style: {
             colors: labelColor,
             fontSize: '13px',
-            fontFamily: 'Public Sans'
-          }
-        }
+            fontFamily: 'Public Sans',
+          },
+        },
       },
       yaxis: {
         labels: {
-          show: false
-        }
+          show: false,
+        },
       },
       tooltip: {
-        enabled: false
+        enabled: false,
       },
       responsive: [
         {
           breakpoint: 1025,
           options: {
             chart: {
-              height: 199
-            }
-          }
-        }
-      ]
+              height: 199,
+            },
+          },
+        },
+      ],
     };
-  if (typeof weeklyEarningReportsEl !== undefined && weeklyEarningReportsEl !== null) {
-    const weeklyEarningReports = new ApexCharts(weeklyEarningReportsEl, weeklyEarningReportsConfig);
+  if (
+    typeof weeklyEarningReportsEl !== undefined &&
+    weeklyEarningReportsEl !== null
+  ) {
+    const weeklyEarningReports = new ApexCharts(
+      weeklyEarningReportsEl,
+      weeklyEarningReportsConfig,
+    );
     weeklyEarningReports.render();
   }
 
@@ -210,7 +223,7 @@
       labels: ['Completed Task'],
       chart: {
         height: 360,
-        type: 'radialBar'
+        type: 'radialBar',
       },
       plotOptions: {
         radialBar: {
@@ -218,11 +231,11 @@
           startAngle: -140,
           endAngle: 130,
           hollow: {
-            size: '65%'
+            size: '65%',
           },
           track: {
             background: cardColor,
-            strokeWidth: '100%'
+            strokeWidth: '100%',
           },
           dataLabels: {
             name: {
@@ -230,17 +243,17 @@
               color: labelColor,
               fontSize: '13px',
               fontWeight: '400',
-              fontFamily: 'Public Sans'
+              fontFamily: 'Public Sans',
             },
             value: {
               offsetY: 10,
               color: headingColor,
               fontSize: '38px',
               fontWeight: '500',
-              fontFamily: 'Public Sans'
-            }
-          }
-        }
+              fontFamily: 'Public Sans',
+            },
+          },
+        },
       },
       colors: [config.colors.primary],
       fill: {
@@ -252,51 +265,54 @@
           inverseColors: true,
           opacityFrom: 1,
           opacityTo: 0.6,
-          stops: [30, 70, 100]
-        }
+          stops: [30, 70, 100],
+        },
       },
       stroke: {
-        dashArray: 10
+        dashArray: 10,
       },
       grid: {
         padding: {
           top: -20,
-          bottom: 5
-        }
+          bottom: 5,
+        },
       },
       states: {
         hover: {
           filter: {
-            type: 'none'
-          }
+            type: 'none',
+          },
         },
         active: {
           filter: {
-            type: 'none'
-          }
-        }
+            type: 'none',
+          },
+        },
       },
       responsive: [
         {
           breakpoint: 1025,
           options: {
             chart: {
-              height: 330
-            }
-          }
+              height: 330,
+            },
+          },
         },
         {
           breakpoint: 769,
           options: {
             chart: {
-              height: 280
-            }
-          }
-        }
-      ]
+              height: 280,
+            },
+          },
+        },
+      ],
     };
   if (typeof supportTrackerEl !== undefined && supportTrackerEl !== null) {
-    const supportTracker = new ApexCharts(supportTrackerEl, supportTrackerOptions);
+    const supportTracker = new ApexCharts(
+      supportTrackerEl,
+      supportTrackerOptions,
+    );
     supportTracker.render();
   }
 
@@ -307,25 +323,25 @@
       series: [
         {
           name: 'Earning',
-          data: [15, 10, 20, 8, 12, 18, 12, 5]
+          data: [15, 10, 20, 8, 12, 18, 12, 5],
         },
         {
           name: 'Expense',
-          data: [-7, -10, -7, -12, -6, -9, -5, -8]
-        }
+          data: [-7, -10, -7, -12, -6, -9, -5, -8],
+        },
       ],
       chart: {
         height: 230,
         parentHeightOffset: 0,
         stacked: true,
         type: 'bar',
-        toolbar: { show: false }
+        toolbar: { show: false },
       },
       tooltip: {
-        enabled: false
+        enabled: false,
       },
       legend: {
-        show: false
+        show: false,
       },
       plotOptions: {
         bar: {
@@ -333,12 +349,12 @@
           columnWidth: '18%',
           borderRadius: 5,
           startingShape: 'rounded',
-          endingShape: 'rounded'
-        }
+          endingShape: 'rounded',
+        },
       },
       colors: [config.colors.primary, grayColor],
       dataLabels: {
-        enabled: false
+        enabled: false,
       },
       grid: {
         show: false,
@@ -346,24 +362,24 @@
           top: -40,
           bottom: -20,
           left: -10,
-          right: -2
-        }
+          right: -2,
+        },
       },
       xaxis: {
         labels: {
-          show: false
+          show: false,
         },
         axisTicks: {
-          show: false
+          show: false,
         },
         axisBorder: {
-          show: false
-        }
+          show: false,
+        },
       },
       yaxis: {
         labels: {
-          show: false
-        }
+          show: false,
+        },
       },
       responsive: [
         {
@@ -371,48 +387,48 @@
           options: {
             plotOptions: {
               bar: {
-                columnWidth: '22%'
-              }
-            }
-          }
+                columnWidth: '22%',
+              },
+            },
+          },
         },
         {
           breakpoint: 1197,
           options: {
             chart: {
-              height: 228
+              height: 228,
             },
             plotOptions: {
               bar: {
                 borderRadius: 8,
-                columnWidth: '26%'
-              }
-            }
-          }
+                columnWidth: '26%',
+              },
+            },
+          },
         },
         {
           breakpoint: 783,
           options: {
             chart: {
-              height: 232
+              height: 232,
             },
             plotOptions: {
               bar: {
                 borderRadius: 6,
-                columnWidth: '28%'
-              }
-            }
-          }
+                columnWidth: '28%',
+              },
+            },
+          },
         },
         {
           breakpoint: 589,
           options: {
             plotOptions: {
               bar: {
-                columnWidth: '16%'
-              }
-            }
-          }
+                columnWidth: '16%',
+              },
+            },
+          },
         },
         {
           breakpoint: 520,
@@ -420,10 +436,10 @@
             plotOptions: {
               bar: {
                 borderRadius: 6,
-                columnWidth: '18%'
-              }
-            }
-          }
+                columnWidth: '18%',
+              },
+            },
+          },
         },
         {
           breakpoint: 426,
@@ -431,37 +447,43 @@
             plotOptions: {
               bar: {
                 borderRadius: 5,
-                columnWidth: '20%'
-              }
-            }
-          }
+                columnWidth: '20%',
+              },
+            },
+          },
         },
         {
           breakpoint: 381,
           options: {
             plotOptions: {
               bar: {
-                columnWidth: '24%'
-              }
-            }
-          }
-        }
+                columnWidth: '24%',
+              },
+            },
+          },
+        },
       ],
       states: {
         hover: {
           filter: {
-            type: 'none'
-          }
+            type: 'none',
+          },
         },
         active: {
           filter: {
-            type: 'none'
-          }
-        }
-      }
+            type: 'none',
+          },
+        },
+      },
     };
-  if (typeof totalEarningChartEl !== undefined && totalEarningChartEl !== null) {
-    const totalEarningChart = new ApexCharts(totalEarningChartEl, totalEarningChartOptions);
+  if (
+    typeof totalEarningChartEl !== undefined &&
+    totalEarningChartEl !== null
+  ) {
+    const totalEarningChart = new ApexCharts(
+      totalEarningChartEl,
+      totalEarningChartOptions,
+    );
     totalEarningChart.render();
   }
 
@@ -479,7 +501,7 @@
         { data: 'project_leader' },
         { data: '' },
         { data: 'status' },
-        { data: '' }
+        { data: '' },
       ],
       columnDefs: [
         {
@@ -491,7 +513,7 @@
           targets: 0,
           render: function (data, type, full, meta) {
             return '';
-          }
+          },
         },
         {
           // For Checkboxes
@@ -504,8 +526,8 @@
             return '<input type="checkbox" class="dt-checkboxes form-check-input">';
           },
           checkboxes: {
-            selectAllRender: '<input type="checkbox" class="form-check-input">'
-          }
+            selectAllRender: '<input type="checkbox" class="form-check-input">',
+          },
         },
         {
           // Avatar image/badge, Name and post
@@ -518,16 +540,34 @@
             if ($user_img) {
               // For Avatar image
               var $output =
-                '<img src="' + assetsPath + 'img/icons/brands/' + $user_img + '" alt="Avatar" class="rounded-circle">';
+                '<img src="' +
+                assetsPath +
+                'img/icons/brands/' +
+                $user_img +
+                '" alt="Avatar" class="rounded-circle">';
             } else {
               // For Avatar badge
               var stateNum = Math.floor(Math.random() * 6);
-              var states = ['success', 'danger', 'warning', 'info', 'primary', 'secondary'];
+              var states = [
+                'success',
+                'danger',
+                'warning',
+                'info',
+                'primary',
+                'secondary',
+              ];
               var $state = states[stateNum],
                 $name = full['project_name'],
                 $initials = $name.match(/\b\w/g) || [];
-              $initials = (($initials.shift() || '') + ($initials.pop() || '')).toUpperCase();
-              $output = '<span class="avatar-initial rounded-circle bg-label-' + $state + '">' + $initials + '</span>';
+              $initials = (
+                ($initials.shift() || '') + ($initials.pop() || '')
+              ).toUpperCase();
+              $output =
+                '<span class="avatar-initial rounded-circle bg-label-' +
+                $state +
+                '">' +
+                $initials +
+                '</span>';
             }
             // Creates full output for row
             var $row_output =
@@ -547,7 +587,7 @@
               '</div>' +
               '</div>';
             return $row_output;
-          }
+          },
         },
         {
           // Teams
@@ -570,7 +610,7 @@
             }
             $output += '</div>';
             return $output;
-          }
+          },
         },
         {
           // Label
@@ -590,7 +630,7 @@
               $status_number +
               '</span></div>'
             );
-          }
+          },
         },
         {
           // Actions
@@ -610,8 +650,8 @@
               '</div>' +
               '</div>'
             );
-          }
-        }
+          },
+        },
       ],
       order: [[2, 'desc']],
       dom: '<"card-header pb-0 pt-sm-0"<"head-label text-center"><"d-flex justify-content-center justify-content-md-end"f>>t<"row mx-2"<"col-sm-12 col-md-6"i><"col-sm-12 col-md-6"p>>',
@@ -623,7 +663,7 @@
             header: function (row) {
               var data = row.data();
               return 'Details of "' + data['project_name'] + '" Project';
-            }
+            },
           }),
           type: 'column',
           renderer: function (api, rowIdx, columns) {
@@ -645,10 +685,12 @@
                 : '';
             }).join('');
 
-            return data ? $('<table class="table"/><tbody />').append(data) : false;
-          }
-        }
-      }
+            return data
+              ? $('<table class="table"/><tbody />').append(data)
+              : false;
+          },
+        },
+      },
     });
     $('div.head-label').html('<h5 class="card-title mb-0">Projects</h5>');
   }
@@ -659,4 +701,6 @@
     $('.dataTables_filter .form-control').removeClass('form-control-sm');
     $('.dataTables_length .form-select').removeClass('form-select-sm');
   }, 300);
+
+
 })();
