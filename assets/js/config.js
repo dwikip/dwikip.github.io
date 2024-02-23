@@ -27,7 +27,7 @@ window.config = {
     borderColor: '#dbdade',
   },
   colors_label: {
-    primary: '#7367f029',
+    primary: '#2d2a70',
     secondary: '#a8aaae29',
     success: '#28c76f29',
     info: '#00cfe829',

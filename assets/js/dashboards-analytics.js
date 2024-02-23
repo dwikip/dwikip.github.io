@@ -702,5 +702,127 @@
     $('.dataTables_length .form-select').removeClass('form-select-sm');
   }, 300);
 
-
+  // var chartProgresPekerjaanOption = {
+  //   series: [
+  //     {
+  //       name: 'Realisasi',
+  //       data: [80],
+  //     },
+  //     {
+  //       name: 'Rencana',
+  //       data: [60],
+  //     },
+  //   ],
+  //   chart: {
+  //     type: 'bar',
+  //     height: 350,
+  //   },
+  //   colors: [config.colors.primary, config.colors.secondary],
+  //   plotOptions: {
+  //     bar: {
+  //       borderRadius: 4,
+  //       horizontal: true,
+  //     },
+  //   },
+  //   dataLabels: {
+  //     enabled: false,
+  //   },
+  //   xaxis: {
+  //     categories: ['Realisasi', 'Rencana'],
+  //   },
+  // };
+  //
+  // var chartProgresPekerjaan = new ApexCharts(
+  //   document.querySelector('#chartProgresPekerjaan'),
+  //   chartProgresPekerjaanOption,
+  // );
+  // chartProgresPekerjaan.render();
+  //
+  // var chartProgresPekerjaanOptionLine = {
+  //   series: [
+  //     {
+  //       name: 'Rencana',
+  //       data: [
+  //         1.5, 3.25, 4.75, 6.75, 8.75, 10.75, 13, 15.25, 17.5, 19.75, 22.25,
+  //       ],
+  //     },
+  //     {
+  //       name: 'Realisasi',
+  //       data: [
+  //         0.24, 2.58, 5.24, 7.96, 11.4, 14.26, 16.92, 21.58, 25.45, 28.75,
+  //         33.78,
+  //       ],
+  //     },
+  //   ],
+  //   colors: [config.colors.secondary, config.colors.primary],
+  //   chart: {
+  //     height: 350,
+  //     type: 'line',
+  //     zoom: {
+  //       enabled: false,
+  //     },
+  //   },
+  //   dataLabels: {
+  //     enabled: false,
+  //   },
+  //   stroke: {
+  //     width: [3, 3],
+  //     curve: 'straight',
+  //     dashArray: [0, 0],
+  //   },
+  //   // title: {
+  //   //   text: 'Page Statistics',
+  //   //   align: 'left',
+  //   // },
+  //   legend: {
+  //     tooltipHoverFormatter: function (val, opts) {
+  //       return (
+  //         val +
+  //         ' - <strong>' +
+  //         opts.w.globals.series[opts.seriesIndex][opts.dataPointIndex] +
+  //         '</strong>'
+  //       );
+  //     },
+  //   },
+  //   markers: {
+  //     size: 0,
+  //     hover: {
+  //       sizeOffset: 6,
+  //     },
+  //   },
+  //   xaxis: {
+  //     categories: [
+  //       1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+  //       21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38,
+  //       39, 40, 41, 42,
+  //     ],
+  //   },
+  //   tooltip: {
+  //     y: [
+  //       {
+  //         title: {
+  //           formatter: function (val) {
+  //             return val + '';
+  //           },
+  //         },
+  //       },
+  //       {
+  //         title: {
+  //           formatter: function (val) {
+  //             return val + '';
+  //           },
+  //         },
+  //       },
+  //     ],
+  //   },
+  //   grid: {
+  //     borderColor: '#f1f1f1',
+  //   },
+  // };
+  //
+  // var chartProgresPekerjaanLine = new ApexCharts(
+  //   document.querySelector('#chartProgresPekerjaanLine'),
+  //   chartProgresPekerjaanOptionLine,
+  // );
+  // chartProgresPekerjaanLine.render();
 })();
